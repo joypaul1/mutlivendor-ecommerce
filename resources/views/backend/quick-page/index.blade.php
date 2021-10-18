@@ -16,13 +16,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('quick-page-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create page',
        'route' => route('backend.site_config.quick.page.create')
     ])
-@endif
+
     <table class="table table-bordered">
         <tbody>
         <tr>
@@ -47,18 +47,17 @@
                 </td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('quick-page-edit'))
+
                             <a href="{{ route('backend.site_config.quick.page.edit', $page->id) }}"
                             class="btn btn-xs btn-info"title="Edit"><i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('quick-page-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{$page->id}})"
                                     title="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                     <form action="{{ route('backend.site_config.quick.page.destroy', $page->id)}}"
                           id="deleteCheck_{{ $page->id }}" method="GET">

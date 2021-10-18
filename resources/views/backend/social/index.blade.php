@@ -2,7 +2,7 @@
 @section('title', 'Add Socail Link')
 @section('page-header')
     <i class="fa fa-info"></i> Add Socail Link
-@endsection 
+@endsection
 @push('css')
     <style>
         @media only screen and (min-width: 768px) {
@@ -38,7 +38,7 @@
                            type="text"
                            id="facebook"
                            class="form-control"
-                           placeholder="link here" 
+                           placeholder="link here"
                            value="{{ $social->facebook?? old('facebook') }}">
                     <strong class="red">{{ $errors->first('facebook') }}</strong>
                     @if($errors->first('facebook'))
@@ -58,7 +58,7 @@
                             id="twitter"
                            placeholder="link here"
                             class="form-control"
-                            value="{{ $social->twitter?? old('twitter')}}" 
+                            value="{{ $social->twitter?? old('twitter')}}"
                            >
                     <strong class="red">{{ $errors->first('twitter') }}</strong>
                     @if($errors->first('twitter'))
@@ -77,7 +77,7 @@
                             id="instagram"
                            placeholder="link here"
                             class="form-control"
-                            value="{{ $social->instagram ?? old('instagram') }}" 
+                            value="{{ $social->instagram ?? old('instagram') }}"
                            >
                     <strong class="red">{{ $errors->first('instagram') }}</strong>
                     @if($errors->first('instagram'))
@@ -97,7 +97,7 @@
                             id="youtube"
                            placeholder="link here"
                             class="form- control"
-                            value="{{ $social->youtube??old('youtube')}}" 
+                            value="{{ $social->youtube??old('youtube')}}"
                             style="width: 100%"
                            >
                     <strong class="red">{{ $errors->first('youtube') }}</strong>
@@ -106,7 +106,7 @@
                     @endif
                 </div>
             </div>
-            @if(hasAccess(' social-link-save'))
+
             <!-- Buttons -->
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-6">
@@ -114,7 +114,7 @@
                         </button>
                     </div>
                 </div>
-            @endif
+
         </form>
     </div>
 

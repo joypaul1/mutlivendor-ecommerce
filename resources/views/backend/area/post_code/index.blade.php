@@ -15,13 +15,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('area-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create area',
        'route' => route('backend.area.post_code.create')
     ])
-@endif
+
 <form class="form-horizontal" method="post" action="{{ route('backend.area.post_code.search') }}" role="form" enctype="multipart/form-data">
         @csrf
         <table class="table table-bordered">
@@ -66,20 +66,19 @@
                 <td>{{ $postCode->name }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('area-edit'))
+
                             <a href="{{ route('backend.area.post_code.edit', ['id' =>$postCode->id]) }}"
                             class="btn btn-xs btn-info"
                             title="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('area-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{ $postCode->id }})"
                                     title="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                      <form action="{{ route('backend.area.post_code.destroy', ['id' => $postCode->id]) }}"
                           id="deleteCheck_{{ $postCode->id }}" method="GET">

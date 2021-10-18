@@ -16,13 +16,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('slider-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Slider Create',
        'route' => route('backend.site_config.slider.create')
     ])
-@endif
+
     <table class="table table-bordered">
         <tbody>
         <tr>
@@ -33,7 +33,7 @@
         @forelse($sliders as $key => $slider)
             <tr>
                 <td>{{ $key + 1 }}</td>
-                
+
                 <td>
                     <img src="{{ asset($slider->image) }}"
                          height="30"
@@ -42,16 +42,15 @@
                 </td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('silder-edit'))
+
                             <a href="{{ route('backend.site_config.slider.edit', $slider->id) }}"
                                 class="btn btn-xs btn-info"title="Edit"><i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('silder-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{$slider->id}})"title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                     <form action="{{ route('backend.site_config.slider.destroy', $slider->id)}}"
                           id="deleteCheck_{{ $slider->id }}" method="GET">

@@ -15,13 +15,12 @@
 @endpush
 
 @section('content')
-@if(hasAccess('division-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Division',
        'route' => route('backend.area.create-division')
     ])
-@endif
     <form class="form-horizontal" method="post" action="{{ route('backend.area.division.search') }}" role="form" enctype="multipart/form-data">
         @csrf
         <table class="table table-bordered">
@@ -62,16 +61,15 @@
             <td>{{ $division->name }}</td>
             <td>
                 <div class="btn-group btn-group-mini btn-corner">
-                    @if(hasAccess('division-edit'))
+
                         <a href="{{ route('backend.area.edit',['id' => $division->id]) }}"class="btn btn-xs btn-info"
                             title="Edit"><i class="ace-icon fa fa-pencil"></i>
                         </a>
-                    @endif
-                    @if(hasAccess('division-delete'))
+
                         <button type="button" class="btn btn-xs btn-danger" onclick="delete_check({{ $division->id }})"
                             title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                         </button>
-                    @endif
+
                 </div>
                 <form action="{{ route('backend.area.destroy', ['id' => $division->id]) }}"
                       id="deleteCheck_{{ $division->id }}" method="GET">

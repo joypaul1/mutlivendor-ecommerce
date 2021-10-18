@@ -15,13 +15,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('city-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create City',
        'route' => route('backend.area.city.create')
     ])
-@endif
+
     <form class="form-horizontal" method="post" action="{{ route('backend.area.city.search') }}" role="form" enctype="multipart/form-data">
         @csrf
         <table class="table table-bordered">
@@ -64,16 +64,15 @@
                 <td>{{ $city->name }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('city-edit'))
+                        
                             <a href="{{ route('backend.area.city.show', ['id' => $city->id]) }}"
                                 class="btn btn-xs btn-info"title="Edit"><i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('city-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{ $city->id }})"title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                     <form action="{{ route('backend.area.city.destroy', ['id' => $city->id]) }}"
                           id="deleteCheck_{{ $city->id }}" method="GET">
