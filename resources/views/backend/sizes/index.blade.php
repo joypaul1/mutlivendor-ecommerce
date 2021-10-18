@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
-    @if(hasAccess('size-create'))
+
         @include('backend.components.page_header', [
         'fa' => 'fa fa-pencil',
         'name' => 'Create Size',
         'route' => route('backend.product.sizes.create')
         ])
-    @endif
+
 
     <form class="form-horizontal" method="post" action="{{ route('backend.product.sizes.search') }}" role="form" enctype="multipart/form-data">
         @csrf
@@ -62,20 +62,20 @@
                 <td>{{ $size->name }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('size-edit'))
+
                             <a href="{{ route('backend.product.sizes.edit', $size->id) }}"
                             class="btn btn-xs btn-info"
                             title="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('size-edit'))
+
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{$size->id}})"
                                     title="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                     <form action="{{ route('backend.product.sizes.destroy', $size->id)}}"
                           id="deleteCheck_{{ $size->id }}" method="GET">

@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('flash-sale-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Flash Sale',
        'route' => route('backend.campaign.flash_sale.create')
     ])
-@endif
+
     <table class="table table-bordered">
         <tbody>
         <tr>
@@ -46,17 +46,16 @@
                 </td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('flash-sale-edit'))
+
                             <a href="{{ route('backend.campaign.flash_sale.edit', $sale->id) }}"
                             class="btn btn-xs btn-info"
                             title="Edit"> <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('flash-sale-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$sale->id}})"
                                     title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                      
                     </div>
                     <form action="{{ route('backend.campaign.flash_sale.destroy', $sale->id)}}"
                           id="deleteCheck_{{ $sale->id }}" method="GET">

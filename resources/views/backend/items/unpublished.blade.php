@@ -48,20 +48,19 @@
                     </td>
                     <td>
                         <div class="btn-group btn-group-mini btn-corner">
-                            @if(hasAccess("item-published-edit"))
+
                                 <a href="{{ route('backend.product.items.unpublished.edit', $item->id) }}"
                                 class="btn btn-xs btn-info"
                                 title="Edit">
                                     <i class="ace-icon fa fa-pencil"></i>
                                 </a>
-                            @endif
-                            @if(hasAccess("item-published-delete"))
+
                                 <button type="button" class="btn btn-xs btn-danger"
                                         onclick="delete_check({{$item->id}})"
                                         title="Delete">
                                     <i class="ace-icon fa fa-trash-o"></i>
                                 </button>
-                            @endif
+                          
                         </div>
                         <form action="{{ route('backend.product.items.destroy', $item->id)}}"
                               id="deleteCheck_{{ $item->id }}" method="GET">

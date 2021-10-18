@@ -37,16 +37,16 @@
                 <td>{{ ($vat->vat)?$vat->vat."%":"0" }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if (hasAccess('vat-edit'))
+
                             <a href="{{ route('backend.econfig.vats.edit', $vat->id) }}"
                                 class="btn btn-xs btn-info" title="Edit"><i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if (hasAccess('vat-delete'))
+
+
                             <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$vat->id}})"
                                 title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                        
                     </div>
                     <form action="{{ route('backend.econfig.vats.destroy', $vat->id)}}"
                           id="deleteCheck_{{ $vat->id }}" method="GET">

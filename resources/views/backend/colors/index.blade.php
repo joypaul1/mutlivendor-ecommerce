@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
-    @if (hasAccess('color-create'))
+
         @include('backend.components.page_header', [
             'fa' => 'fa fa-pencil',
             'name' => 'Create Color',
             'route' => route('backend.product.colors.create')
         ])
-    @endif
+
 
     <form class="form-horizontal" method="post" action="{{ route('backend.product.colors.search') }}" role="form" enctype="multipart/form-data">
         @csrf
@@ -64,20 +64,19 @@
                 <td>{{ $color->value }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if (hasAccess('color-edit'))
+
                             <a href="{{ route('backend.product.colors.edit', $color->id) }}"
                             class="btn btn-xs btn-info"
                             title="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if (hasAccess('color-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{$color->id}})"
                                     title="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                     
                     </div>
                     <form action="{{ route('backend.product.colors.destroy', $color->id)}}"
                           id="deleteCheck_{{ $color->id }}" method="GET">

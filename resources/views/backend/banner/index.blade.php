@@ -16,13 +16,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('banner-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Banner',
        'route' => route('backend.site_config.banner.create')
     ])
-@endif
+
     <table class="table table-bordered">
         <tbody>
         <tr>
@@ -50,20 +50,19 @@
                 </td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('banner-edit'))
+
                             <a href="{{ route('backend.site_config.banner.edit', $banner->id) }}"
                             class="btn btn-xs btn-info"
                             title="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('banner-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{$banner->id}})"
                                     title="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                       
                     </div>
                     <form action="{{ route('backend.site_config.banner.destroy', $banner->id)}}"
                           id="deleteCheck_{{ $banner->id }}" method="GET">

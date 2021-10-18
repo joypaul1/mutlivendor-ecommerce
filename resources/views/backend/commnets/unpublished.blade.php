@@ -33,7 +33,7 @@
             <th class="bg-dark" style="width: 20%">Rating</th>
             <th class="bg-dark" style="">Action</th>
         </tr>
-        
+
         @forelse($comments as $key => $comment)
             <tr>
                 <td>{{ $key + 1 }}</td>
@@ -44,20 +44,19 @@
 
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('unpublished-comment-view'))
+
                             <a href="{{ route('backend.comment.show', $comment->id) }}"
                                 class="btn btn-xs btn-info"
                                 name="show">
                                 <i class="ace-icon fa fa-eye"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('unpublished-comment-delete'))
+
                         <button type="button" class="btn btn-xs btn-danger"
                                 onclick="delete_check({{$comment->id}})"
                                 title="Delete">
                             <i class="ace-icon fa fa-trash-o"></i>
                         </button>
-                        @endif
+                        
                     </div>
                     <form action="{{ route('backend.comment.destroy', $comment->id)}}"
                           id="deleteCheck_{{ $comment->id }}" method="GET">

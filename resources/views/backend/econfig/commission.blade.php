@@ -35,16 +35,15 @@
                 <td>{{ ($commission->commission)?$commission->commission."%":"0" }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('commission-list-edit'))
+
                             <a href="{{ route('backend.econfig.commission.edit', $commission->id) }}"
                             class="btn btn-xs btn-info"title="Edit"><i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('commission-list-edit'))
+
                             <button type="button" class="btn btn-xs btn-danger" onclick="delete_check({{$commission->id}})"
                                 title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                     <form action="{{ route('backend.econfig.commissions.destroy', $commission->id)}}"
                           id="deleteCheck_{{ $commission->id }}" method="GET">

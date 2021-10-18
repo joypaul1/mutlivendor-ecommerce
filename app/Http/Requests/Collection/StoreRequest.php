@@ -26,8 +26,8 @@ class StoreRequest extends FormRequest
         return [
             'title'        => 'required|string',
             'cover_photo'  => 'required',
-            'cover_photo_2'  => 'required',
-            'cover_photo_3'  => 'required',
+            // 'cover_photo_2'  => 'required',
+            // 'cover_photo_3'  => 'required',
             'status'       => 'required',
             'show_in_home'  => 'nullable',
         ];

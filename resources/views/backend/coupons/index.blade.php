@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
- @if(hasAccess('coupons-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Coupon',
        'route' => route('backend.campaign.coupons.create')
     ])
-@endif
+
     <div class="table-responsive">
         <table class="table table-bordered">
             <tbody>
@@ -49,16 +49,15 @@
                     <td>{{ $coupon->is_active ? 'Yes' : 'No' }}</td>
                     <td>
                         <div class="btn-group btn-group-minier btn-corner">
-                            @if(hasAccess('coupons-edit'))
+
                                 <a href="{{ route('backend.campaign.coupons.edit', $coupon->id) }}" class="btn btn-xs btn-info"
                                     title="Edit"><i class="ace-icon fa fa-pencil"></i>
                                 </a>
-                            @endif
-                            @if(hasAccess('coupons-delete'))
+
                                 <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$coupon->id}})"
                                         title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                                 </button>
-                            @endif
+                           
                         </div>
                         <form action="{{ route('backend.campaign.coupons.destroy', $coupon->id)}}"
                               id="deleteCheck_{{ $coupon->id }}" method="GET">

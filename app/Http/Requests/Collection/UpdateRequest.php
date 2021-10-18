@@ -18,8 +18,8 @@ class UpdateRequest extends FormRequest
         return [
             'title'         => 'required|string',
             'cover_photo'   => 'nullable',
-            'cover_photo_2' => 'nullable',
-            'cover_photo_3' => 'nullable',
+            // 'cover_photo_2' => 'nullable',
+            // 'cover_photo_3' => 'nullable',
             'status'        => 'required',
             'show_in_home'  => 'nullable',
         ];

@@ -75,15 +75,14 @@
                 </td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('customer-view'))
+
                             <a href="{{ route('backend.customer.show',$user->id) }}" class="btn btn-xs btn-info"title="Edit"><i class="ace-icon fa fa-eye"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('customer-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$user->id}})"
                                 title="Delete"><i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                        
                     </div>
                     <form action="{{ route('backend.customer.destroy',$user->id) }}"
                           id="deleteCheck_{{ $user->id }}" method="Post">
