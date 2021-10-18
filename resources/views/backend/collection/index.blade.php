@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('collection-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Collection',
        'route' => route('backend.product.collections.create')
     ])
-@endif
+
     <form class="form-horizontal" method="post" action="{{ route('admin.product.collections.search') }}" role="form" enctype="multipart/form-data">
         @csrf
         <table class="table table-bordered">
@@ -73,16 +73,15 @@
 
                 <td>
                     <div class="btn-group btn-group-minier btn-corner">
-                        @if(hasAccess('collection-edit'))
+
                             <a href="{{route('backend.product.collections.edit', ['id' => $collection->id])}}"
                                 class="btn btn-xs btn-info"title="Edit"><i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('collection-delete'))
+
                             <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$collection->id}})"
                                     title="Delete"> <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+
                     </div>
                     <form action="{{ route('backend.product.collections.destroy', ['id' => $collection->id])}}"
                           id="deleteCheck_{{ $collection->id }}" method="GET">

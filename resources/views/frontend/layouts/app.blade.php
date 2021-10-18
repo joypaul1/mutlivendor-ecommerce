@@ -15,18 +15,20 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend') }}/assets/images/favicon.png">
 
 @include('frontend._include.headerCss')
-@stick('cssSection');
+
+@stack('cssSection')
 
 </head>
 
 <body>
 
 <!-- LOADER -->
-@include('frontend._partials.preloader')
+<!-- @include('frontend._partials.preloader') -->
 <!-- END LOADER -->
 
 <!-- Home Popup Section -->
 @include('frontend._partials.popup')
+
 <!-- End Screen Load Popup Section -->
 
 <!-- START HEADER -->
@@ -2366,6 +2368,6 @@
 <!-- END FOOTER -->
 
 @include('frontend._include.footerJs')
-@stick('jsSection');
+@stack('jsSection')
 </body>
 </html>

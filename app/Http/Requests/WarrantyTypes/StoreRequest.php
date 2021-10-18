@@ -15,7 +15,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => 'required|string|unique:warranty_types,name',
-            'time' => 'required|string',
+            'time' => 'nullable|string',
         ];
     }
 
@@ -26,5 +26,6 @@ class StoreRequest extends FormRequest
             'name.string' => 'Name must be string.',
             'name.unique' => 'Name has already been taken.',
         ];
+
     }
 }

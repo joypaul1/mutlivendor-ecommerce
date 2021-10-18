@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="col-sm-2 control-label no-padding-right" for="cover_photo_2">Cover Photo 2<sup class="red">*</sup></label>
                 <div class="col-sm-4">
                     <input type="file"
@@ -58,9 +58,9 @@
                            value=" ">
                     <strong class="red">{{ $errors->first('cover_photo_2') }}</strong>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="col-sm-2 control-label no-padding-right" for="cover_photo_3">Cover Photo 3<sup class="red">*</sup></label>
                 <div class="col-sm-4">
                     <input type="file"
@@ -71,7 +71,7 @@
                            value=" ">
                     <strong class="red">{{ $errors->first('cover_photo_3') }}</strong>
                 </div>
-            </div>
+            </div> -->
 
 
 

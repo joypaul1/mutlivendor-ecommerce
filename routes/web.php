@@ -81,4 +81,4 @@ Route::group(['prefix' => 'sadmin', 'middleware' => ['auth:admin', 'admin'], 'na
 
 // Frontend Routes
 
-require_once __DIR__ . '\frontend\home.php';
+require_once __DIR__ . '/frontend/home.php';

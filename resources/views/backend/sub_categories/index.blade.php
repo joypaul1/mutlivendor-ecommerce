@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('subcategory-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Subcategory',
        'route' => route('backend.product.sub_categories.create')
     ])
-@endif
+
     <form class="form-horizontal" method="post" action="{{ route('backend.product.sub_categories.search') }}" role="form" enctype="multipart/form-data">
         @csrf
         <table class="table table-bordered">
@@ -71,21 +71,20 @@
                     </div>
 
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('subcategory-edit'))
+
                             <a href="{{ route('backend.product.sub_categories.edit', $subCategory->id) }}"
                             class="btn btn-xs btn-info"
                             name="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('subcategory-delete'))
+
                             <button type="button"
                                     onclick="delete_check({{$subCategory->id}})"
                                     class="btn btn-xs btn-danger"
                                     name="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                       
                     </div>
                     <form action="{{ route('backend.product.sub_categories.destroy', $subCategory->id)}}"
                           id="deleteCheck_{{ $subCategory->id }}" method="GET">

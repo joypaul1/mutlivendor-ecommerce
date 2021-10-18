@@ -58,6 +58,7 @@
             <th class="bg-dark" style="width: 16%">Image</th>
             <th class="bg-dark" style="width: 7%">Action</th>
         </tr>
+
         @forelse($childCategories as $key => $childCategory)
             <tr>
                 <td>{{ $key + 1 }}</td>

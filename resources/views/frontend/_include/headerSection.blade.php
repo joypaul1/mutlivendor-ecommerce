@@ -1,6 +1,6 @@
 <!-- START HEADER -->
 <header class="header_wrap">
-	<div class="top-header d-none d-md-block">
+	<!-- <div class="top-header d-none d-md-block">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-8">
@@ -38,13 +38,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="middle-header dark_skin">
     	<div class="container">
         	<div class="nav_block">
                 <a class="navbar-brand" href="index.html">
-                    <img class="logo_light" src="{{ asset('frontend') }}/assets/images/logo_light.png" alt="logo" />
-                    <img class="logo_dark" src="{{ asset('frontend') }}/assets/images/logo_dark.png" alt="logo" />
+                    <img class="logo_light" src="{{ asset('frontend') }}/assets/logo/logo.jpg" alt="logo" />
+                    <img class="logo_dark" src="{{ asset('frontend') }}/assets/logo/logo.jpg" alt="logo" width="200" height="50"/>
                 </a>
                 <div class="contact_phone order-md-last">
                     <i class="linearicons-phone-wave"></i>

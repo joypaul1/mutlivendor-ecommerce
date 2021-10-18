@@ -14,13 +14,13 @@
 @endpush
 
 @section('content')
-@if(hasAccess('warranty-create'))
+
     @include('backend.components.page_header', [
        'fa' => 'fa fa-pencil',
        'name' => 'Create Warranty Type',
        'route' => route('backend.product.warranty-types.create')
     ])
-@endif
+
 
     <form class="form-horizontal" method="post" action="{{ route('backend.product.warranty-types.search') }}" role="form" enctype="multipart/form-data">
         @csrf
@@ -63,20 +63,19 @@
                 {{-- <td>{{ $type->time }}</td> --}}
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-                        @if(hasAccess('warranty-create'))
+
                             <a href="{{ route('backend.product.warranty-types.edit', $type->id) }}"
                             class="btn btn-xs btn-info"
                             title="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-                        @endif
-                        @if(hasAccess('warranty-create'))
+
                             <button type="button" class="btn btn-xs btn-danger"
                                     onclick="delete_check({{$type->id}})"
                                     title="Delete">
                                 <i class="ace-icon fa fa-trash-o"></i>
                             </button>
-                        @endif
+                       
                     </div>
                     <form action="{{ route('backend.product.warranty-types.destroy', $type->id)}}"
                           id="deleteCheck_{{ $type->id }}" method="GET">

@@ -18,6 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('image')->nullable();
+            $table->integer('position')->nullable();
             $table->boolean('show_on_top')->default(false);
             $table->boolean('display_on_home')->default(false);
             $table->timestamps();
