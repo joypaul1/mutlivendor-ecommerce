@@ -1,42 +1,28 @@
-<!-- Home Popup Section -->
-<div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
-                </button>
-                <div class="row no-gutters">
-                    <div class="col-sm-5">
-                    	<div class="background_bg h-100" data-img-src="{{ asset('frontend') }}/assets/images/popup_img.jpg"></div>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="popup_content">
-                            <div class="popup-text">
-                                <div class="heading_s4">
-                                    <h4>Subscribe and Get 25% Discount!</h4>
-                                </div>
-                                <p>Subscribe to the newsletter to receive updates about new products.</p>
+<div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <div class="deal"
+                            style="background-image: url('{{ asset('frontend') }}/assets/imgs/banner/menu-banner-7.png')">
+                            <div class="deal-top">
+                                <h2 class="text-brand">Deal of the Day</h2>
+                                <h5>Limited quantities.</h5>
                             </div>
-                            <form method="post">
-                            	<div class="form-group">
-                                	<input name="email" required type="email" class="form-control rounded-0" placeholder="Enter Your Email">
+                            <div class="deal-content">
+                                <h6 class="product-title"><a href="shop-product-right.html">Summer Collection New Morden Design</a></h6>
+                                <div class="product-price"><span class="new-price">$139.00</span><span class="old-price">$160.99</span></div>
+                            </div>
+                            <div class="deal-bottom">
+                                <p>Hurry Up! Offer End In:</p>
+                                <div class="deals-countdown" data-countdown="2025/03/25 00:00:00"><span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> days </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> hours </span></span>
+                                    <span
+                                        class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> mins </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> sec </span></span>
                                 </div>
-                                <div class="form-group">
-                                	<button class="btn btn-fill-line btn-block text-uppercase rounded-0" title="Subscribe" type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                            <div class="chek-form">
-                                <div class="custome-checkbox">
-                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
-                                    <label class="form-check-label" for="exampleCheckbox3"><span>Don't show this popup again!</span></label>
-                                </div>
+                                <a href="shop-grid-right.html" class="btn hover-up">Shop Now <i class="fi-rs-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    	</div>
-    </div>
-</div>
-<!-- End Screen Load Popup Section -->
+        </div>

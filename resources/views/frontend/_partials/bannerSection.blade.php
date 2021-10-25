@@ -1,52 +1,36 @@
-<!-- START SECTION BANNER -->
-<div class="banner_section slide_medium shop_banner_slider staggered-animation-wrap">
-	<div class="container">
-    	<div class="row">
-        	<div class="col-lg-9 offset-lg-3">
-                <div id="carouselExampleControls" class="carousel slide light_arrow" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active background_bg" data-img-src="{{ asset('frontend') }}/assets/images/banner4.jpg">
-                            <div class="banner_slide_content banner_content_inner">
-                                <div class="col-lg-8 col-10">
-                                    <div class="banner_content overflow-hidden">
-                                        <h5 class="mb-3 staggered-animation font-weight-light" data-animation="slideInLeft" data-animation-delay="0.5s">Get up to 50% off Today Only!</h5>
-                                        <h2 class="staggered-animation" data-animation="slideInLeft" data-animation-delay="1s">Woman Fashion</h2>
-                                        <a class="btn btn-fill-out rounded-0 staggered-animation text-uppercase" href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item background_bg" data-img-src="{{ asset('frontend') }}/assets/images/banner5.jpg">
-                            <div class="banner_slide_content banner_content_inner">
-                                <div class="col-lg-8 col-10">
-                                    <div class="banner_content overflow-hidden">
-                                        <h5 class="mb-3 staggered-animation font-weight-light" data-animation="slideInLeft" data-animation-delay="0.5s">50% off in all products</h5>
-                                        <h2 class="staggered-animation" data-animation="slideInLeft" data-animation-delay="1s">Man Fashion</h2>
-                                        <a class="btn btn-fill-out rounded-0 staggered-animation text-uppercase" href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item background_bg" data-img-src="{{ asset('frontend') }}/assets/images/banner6.jpg">
-                            <div class="banner_slide_content banner_content_inner">
-                                <div class="col-lg-8 col-10">
-                                    <div class="banner_content overflow-hidden">
-                                        <h5 class="mb-3 staggered-animation font-weight-light" data-animation="slideInLeft" data-animation-delay="0.5s">Taking your Viewing Experience to Next Level</h5>
-                                        <h2 class="staggered-animation" data-animation="slideInLeft" data-animation-delay="1s">Summer Sale</h2>
-                                        <a class="btn btn-fill-out rounded-0 staggered-animation text-uppercase" href="shop-left-sidebar.html" data-animation="slideInLeft" data-animation-delay="1.5s">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<section class="banners mb-15">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="banner-img wow fadeIn animated">
+                    <img src="{{ asset('frontend') }}/assets/imgs/banner/banner-1.png" alt="">
+                    <div class="banner-text">
+                        <span>Smart Offer</span>
+                        <h4>Save 20% on <br>Woman Bag</h4>
+                        <a href="shop-grid-right.html">Shop Now <i class="fi-rs-arrow-right"></i></a>
                     </div>
-                    <ol class="carousel-indicators indicators_style1">
-                        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-                    </ol>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="banner-img wow fadeIn animated">
+                    <img src="{{ asset('frontend') }}/assets/imgs/banner/banner-2.png" alt="">
+                    <div class="banner-text">
+                        <span>Sale off</span>
+                        <h4>Great Summer <br>Collection</h4>
+                        <a href="shop-grid-right.html">Shop Now <i class="fi-rs-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-md-none d-lg-flex">
+                <div class="banner-img wow fadeIn animated  mb-sm-0">
+                    <img src="{{ asset('frontend') }}/assets/imgs/banner/banner-3.png" alt="">
+                    <div class="banner-text">
+                        <span>New Arrivals</span>
+                        <h4>Shop Today’s <br>Deals & Offers</h4>
+                        <a href="shop-grid-right.html">Shop Now <i class="fi-rs-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- END SECTION BANNER -->
+</section>
