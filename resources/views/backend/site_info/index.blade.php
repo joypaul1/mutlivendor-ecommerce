@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            @if(hasAccess('information-save'))
+
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="pull-right">
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                 </div>
-            @endif
+
         </form>
     </div>
       <div class="col-sm-3">

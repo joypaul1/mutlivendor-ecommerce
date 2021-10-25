@@ -21,7 +21,7 @@ class UpdateRequest extends FormRequest
             'mobile'            => 'required|string',
             'short_desc'        => 'required|string',
             'logo'              => 'nullable|image|dimensions:min_width=217,min_height=67',
-            'ficon'             => 'nullable|image|dimensions:max_width=32,max_height=32',
+            'ficon'             => 'nullable|image|dimensions:min_width=32,min_height=32',
         ];
     }
 

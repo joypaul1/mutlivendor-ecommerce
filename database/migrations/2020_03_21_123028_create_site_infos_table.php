@@ -16,7 +16,9 @@ class CreateSiteInfosTable extends Migration
         Schema::create('site_infos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('title')->nullable();
             $table->string('logo')->nullable();
+            $table->string('ficon')->nullable();
             $table->string('address')->nullable();
             $table->string('email')->nullable();
             $table->string('mobile')->nullable();

@@ -18,9 +18,9 @@ class SiteInfoController extends Controller
     public function update(UpdateRequest $request)
     {
         $info = SiteInfo::find(1);
-        $logo = (new SimpleUpload)->file($request->file('logo'))->dirName('site')->resizeImage(217,67)->deleteIfExists($info->logo)->save();
+        $logo = (new SimpleUpload)->file($request->file('logo'))->dirName('site')->resizeImage(150,50)->deleteIfExists($info->logo)->save();
         $ficon = (new SimpleUpload)->file($request->file('ficon'))->dirName('ficon')->resizeImage(32,32)->deleteIfExists($info->ficon)->save();
-        // dd($ficon);
+
         $info->update([
             'logo'          => $logo,
             'ficon'         => $ficon,
