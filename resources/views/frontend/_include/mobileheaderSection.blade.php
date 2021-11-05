@@ -2,7 +2,7 @@
             <div class="mobile-header-wrapper-inner">
                 <div class="mobile-header-top">
                     <div class="mobile-header-logo">
-                        <a href="index.html"><img src="{{ asset('frontend') }}/assets/imgs/theme/logo.svg" alt="logo"></a>
+                        <a href="/"><img src="{{ asset('frontend') }}/assets/imgs/theme/logo.svg" alt="logo"></a>
                     </div>
                     <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                         <button class="close-style search-close">
@@ -41,9 +41,9 @@
                         <nav>
                             <ul class="mobile-menu">
                                 <li class="menu-item-has-children">
-                                    <span class="menu-expand"></span><a href="index.html">Home</a>
+                                    <span class="menu-expand"></span><a href="/">Home</a>
                                     <ul class="dropdown">
-                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="/">Home 1</a></li>
                                         <li><a href="index-2.html">Home 2</a></li>
                                         <li><a href="index-3.html">Home 3</a></li>
                                         <li><a href="index-4.html">Home 4</a></li>

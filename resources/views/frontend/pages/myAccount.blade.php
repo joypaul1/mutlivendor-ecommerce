@@ -99,7 +99,7 @@
     <div class="bottom_header dark_skin main_menu_uppercase">
     	<div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img class="logo_light" src="{{ asset('frontend') }}/assets/images/logo_light.png" alt="logo">
                     <img class="logo_dark" src="{{ asset('frontend') }}/assets/images/logo_dark.png" alt="logo">
                 </a>
@@ -112,7 +112,7 @@
                             <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Home</a>
                             <div class="dropdown-menu">
                                 <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="index.html">Fashion 1</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item" href="/">Fashion 1</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-2.html">Fashion 2</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-3.html">Furniture 1</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-4.html">Furniture 2</a></li>

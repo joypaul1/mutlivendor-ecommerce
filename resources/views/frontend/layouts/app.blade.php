@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
-        <title> @lang("E-commerce") </title>
+        <title> {{$info->title??'-'}}  @yield('title')</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
     </head>
     <body>
         <!-- Modal -->
-        @include('frontend._partials.popup')
+        <!-- @include('frontend._partials.popup') -->
         <!-- Quick view -->
         <div class="modal fade custom-modal" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
             <div class="modal-dialog">

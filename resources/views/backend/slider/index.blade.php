@@ -27,7 +27,9 @@
         <tbody>
         <tr>
             <th class="bg-dark" style="width: 10px">SL</th>
-            <th class="bg-dark" style="width: 40%">Image</th>
+            <th class="bg-dark" >Image</th>
+            <th class="bg-dark" >Highlight Text</th>
+            <th class="bg-dark" >Offer Text</th>
             <th class="bg-dark" style="">Action</th>
         </tr>
         @forelse($sliders as $key => $slider)
@@ -40,6 +42,8 @@
                          width="120"
                          alt="No Image">
                 </td>
+                <td>{{ $slider->short_desc??' ' }}</td>
+                <td>{{ $slider->offer_desc??' ' }}</td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
 

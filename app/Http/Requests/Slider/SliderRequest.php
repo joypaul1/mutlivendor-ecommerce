@@ -34,4 +34,9 @@ class SliderRequest extends FormRequest
             'image.dimensions'  => 'Image min_width=610px,min_height=410px.',
         ];
     }
+
+    public function storeSlider($data)
+    {
+
+    }
 }

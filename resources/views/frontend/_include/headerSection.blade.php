@@ -43,7 +43,7 @@
                 <div class="container">
                     <div class="header-wrap">
                         <div class="logo logo-width-1">
-                            <a href="index.html"><img src="{{ ($info->logo??' ') }}" alt="logo"></a>
+                            <a href="/"><img src="{{ asset($info->logo??' ') }}" alt="logo"></a>
                         </div>
                         <div class="header-right">
                             <div class="search-style-2">
@@ -125,7 +125,7 @@
                 <div class="container">
                     <div class="header-wrap header-space-between position-relative">
                         <div class="logo logo-width-1 d-block d-lg-none">
-                            <a href="index.html"><img src="{{ ($info->logo??' ') }}" alt="logo"></a>
+                            <a href="/"><img src="{{ asset($info->logo??' ') }}" alt="logo"></a>
                         </div>
                         <div class="header-nav d-none d-lg-flex">
                             <div class="main-categori-wrap d-none d-lg-block">
@@ -313,9 +313,9 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <a class="active" href="index.html">Home <i class="fi-rs-angle-down"></i></a>
+                                            <a class="active" href="/">Home <i class="fi-rs-angle-down"></i></a>
                                             <ul class="sub-menu">
-                                                <li><a href="index.html">Home 1</a></li>
+                                                <li><a href="/">Home 1</a></li>
                                                 <li><a href="index-2.html">Home 2</a></li>
                                                 <li><a href="index-3.html">Home 3</a></li>
                                                 <li><a href="index-4.html">Home 4</a></li>

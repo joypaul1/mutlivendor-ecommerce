@@ -12,12 +12,12 @@
 <!-- Favicon Icon -->
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend') }}/assets/images/favicon.png">
 <!-- Animation CSS -->
-<link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/animate.css">	
+<link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/animate.css">
 <!-- Latest Bootstrap min CSS -->
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/bootstrap/css/bootstrap.min.css">
 <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
 <!-- Icon Font CSS -->
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/all.min.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/ionicons.min.css">
@@ -95,7 +95,7 @@
     	</div>
     </div>
 </div>
-<!-- End Screen Load Popup Section --> 
+<!-- End Screen Load Popup Section -->
 
 <!-- START HEADER -->
 <div class="header_sticky_bar d-none" style="height: 119.656px;"></div><header class="header_wrap fixed-top header_with_topbar" style="">
@@ -137,12 +137,12 @@
     </div>
     <div class="bottom_header dark_skin main_menu_uppercase">
     	<div class="container">
-            <nav class="navbar navbar-expand-lg"> 
-                <a class="navbar-brand" href="index.html">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="/">
                     <img class="logo_light" src="{{ asset('frontend') }}/assets/images/logo_light.png" alt="logo">
                     <img class="logo_dark" src="{{ asset('frontend') }}/assets/images/logo_dark.png" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
                     <span class="ion-android-menu"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -150,22 +150,22 @@
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Home</a>
                             <div class="dropdown-menu">
-                                <ul> 
-                                    <li><a class="dropdown-item nav-link nav_item" href="index.html">Fashion 1</a></li>
+                                <ul>
+                                    <li><a class="dropdown-item nav-link nav_item" href="/">Fashion 1</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-2.html">Fashion 2</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-3.html">Furniture 1</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-4.html">Furniture 2</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-5.html">Electronics 1</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="index-6.html">Electronics 2</a></li>
                                 </ul>
-                            </div>   
+                            </div>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <ul> 
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html">About Us</a></li> 
-                                    <li><a class="dropdown-item nav-link nav_item" href="contact.html">Contact Us</a></li> 
+                                <ul>
+                                    <li><a class="dropdown-item nav-link nav_item" href="about.html">About Us</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item" href="contact.html">Contact Us</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="faq.html">Faq</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="404.html">404 Error Page</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="login.html">Login</a></li>
@@ -179,7 +179,7 @@
                             <div class="dropdown-menu">
                                 <ul class="mega-menu d-lg-flex">
                                     <li class="mega-menu-col col-lg-3">
-                                        <ul> 
+                                        <ul>
                                             <li class="dropdown-header">Woman's</li>
                                             <li><a class="dropdown-item nav-link nav_item" href="shop-list-left-sidebar.html">Vestibulum sed</a></li>
                                             <li><a class="dropdown-item nav-link nav_item" href="shop-left-sidebar.html">Donec porttitor</a></li>
@@ -260,12 +260,12 @@
                                     <li>
                                         <a class="dropdown-item menu-link dropdown-toggler" href="#">Grids</a>
                                         <div class="dropdown-menu">
-                                            <ul> 
+                                            <ul>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-three-columns.html">3 columns</a></li>
-                                            	<li><a class="dropdown-item nav-link nav_item" href="blog-four-columns.html">4 columns</a></li> 
-                                            	<li><a class="dropdown-item nav-link nav_item" href="blog-left-sidebar.html">Left Sidebar</a></li> 
+                                            	<li><a class="dropdown-item nav-link nav_item" href="blog-four-columns.html">4 columns</a></li>
+                                            	<li><a class="dropdown-item nav-link nav_item" href="blog-left-sidebar.html">Left Sidebar</a></li>
                                             	<li><a class="dropdown-item nav-link nav_item" href="blog-right-sidebar.html">right Sidebar</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="blog-standard-left-sidebar.html">Standard Left Sidebar</a></li> 
+                                                <li><a class="dropdown-item nav-link nav_item" href="blog-standard-left-sidebar.html">Standard Left Sidebar</a></li>
                                             	<li><a class="dropdown-item nav-link nav_item" href="blog-standard-right-sidebar.html">Standard right Sidebar</a></li>
                                             </ul>
                                         </div>
@@ -273,10 +273,10 @@
                                     <li>
                                         <a class="dropdown-item menu-link dropdown-toggler" href="#">Masonry</a>
                                         <div class="dropdown-menu">
-                                            <ul> 
+                                            <ul>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-masonry-three-columns.html">3 columns</a></li>
-                                           		<li><a class="dropdown-item nav-link nav_item" href="blog-masonry-four-columns.html">4 columns</a></li> 
-                                            	<li><a class="dropdown-item nav-link nav_item" href="blog-masonry-left-sidebar.html">Left Sidebar</a></li> 
+                                           		<li><a class="dropdown-item nav-link nav_item" href="blog-masonry-four-columns.html">4 columns</a></li>
+                                            	<li><a class="dropdown-item nav-link nav_item" href="blog-masonry-left-sidebar.html">Left Sidebar</a></li>
                                             	<li><a class="dropdown-item nav-link nav_item" href="blog-masonry-right-sidebar.html">right Sidebar</a></li>
                                             </ul>
                                         </div>
@@ -284,11 +284,11 @@
                                     <li>
                                         <a class="dropdown-item menu-link dropdown-toggler" href="#">Single Post</a>
                                         <div class="dropdown-menu">
-                                            <ul> 
+                                            <ul>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-single.html">Default</a></li>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-single-left-sidebar.html">left sidebar</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item" href="blog-single-slider.html">slider post</a></li> 
-                                                <li><a class="dropdown-item nav-link nav_item" href="blog-single-video.html">video post</a></li> 
+                                                <li><a class="dropdown-item nav-link nav_item" href="blog-single-slider.html">slider post</a></li>
+                                                <li><a class="dropdown-item nav-link nav_item" href="blog-single-video.html">video post</a></li>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-single-audio.html">audio post</a></li>
                                             </ul>
                                         </div>
@@ -296,7 +296,7 @@
                                     <li>
                                         <a class="dropdown-item menu-link dropdown-toggler" href="#">List</a>
                                         <div class="dropdown-menu">
-                                            <ul> 
+                                            <ul>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-list-left-sidebar.html">left sidebar</a></li>
                                                 <li><a class="dropdown-item nav-link nav_item" href="blog-list-right-sidebar.html">right sidebar</a></li>
                                             </ul>
@@ -312,7 +312,7 @@
                                     <li class="mega-menu-col col-lg-9">
                                         <ul class="d-lg-flex">
                                             <li class="mega-menu-col col-lg-4">
-                                                <ul> 
+                                                <ul>
                                                     <li class="dropdown-header">Shop Page Layout</li>
                                                     <li><a class="dropdown-item nav-link nav_item" href="shop-list.html">shop List view</a></li>
                                                     <li><a class="dropdown-item nav-link nav_item" href="shop-list-left-sidebar.html">shop List Left Sidebar</a></li>
@@ -350,7 +350,7 @@
                                                 <div class="shop_banner">
                                                     <div class="banner_img overlay_bg_40">
                                                         <img src="{{ asset('frontend') }}/assets/images/shop_banner.jpg" alt="shop_banner">
-                                                    </div> 
+                                                    </div>
                                                     <div class="shop_bn_content">
                                                         <h5 class="text-uppercase shop_subtitle">New Collection</h5>
                                                         <h3 class="text-uppercase shop_title">Sale 30% Off</h3>
@@ -363,7 +363,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="nav-link nav_item" href="contact.html">Contact Us</a></li> 
+                        <li><a class="nav-link nav_item" href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <ul class="navbar-nav attr-nav align-items-center">
@@ -465,11 +465,11 @@
                                 <img src="{{ asset('frontend') }}/assets/images/product_small_img3.jpg" alt="product_small_img3">
                             </a>
                         </div></div></div>
-                        
-                        
-                        
-                        
-                        
+
+
+
+
+
                     <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="" aria-disabled="false">Next</button></div>
                 </div>
             </div>
@@ -540,7 +540,7 @@
                         <li>Category: <a href="#">Clothing</a></li>
                         <li>Tags: <a href="#" rel="tag">Cloth</a>, <a href="#" rel="tag">printed</a> </li>
                     </ul>
-                    
+
                     <div class="product_share">
                         <span>Share:</span>
                         <ul class="social_icons">
@@ -648,7 +648,7 @@
                                     <div class="form-group col-12">
                                         <div class="star_rating">
                                             <span data-value="1"><i class="far fa-star"></i></span>
-                                            <span data-value="2"><i class="far fa-star"></i></span> 
+                                            <span data-value="2"><i class="far fa-star"></i></span>
                                             <span data-value="3"><i class="far fa-star"></i></span>
                                             <span data-value="4"><i class="far fa-star"></i></span>
                                             <span data-value="5"><i class="far fa-star"></i></span>
@@ -663,7 +663,7 @@
                                     <div class="form-group col-md-6">
                                         <input required="required" placeholder="Enter Email *" class="form-control" name="email" type="email">
                                     </div>
-                                   
+
                                     <div class="form-group col-12">
                                         <button type="submit" class="btn btn-fill-out" name="submit" value="Submit">Submit Review</button>
                                     </div>
@@ -687,11 +687,11 @@
                 	<h3>Releted Products</h3>
                 </div>
             	<div class="releted_product_slider carousel_slider owl-carousel owl-theme owl-loaded owl-drag" data-margin="20" data-responsive="{&quot;0&quot;:{&quot;items&quot;: &quot;1&quot;}, &quot;481&quot;:{&quot;items&quot;: &quot;2&quot;}, &quot;768&quot;:{&quot;items&quot;: &quot;3&quot;}, &quot;1199&quot;:{&quot;items&quot;: &quot;4&quot;}}">
-                	
-                    
-                    
-                    
-                    
+
+
+
+
+
                 <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1413px;"><div class="owl-item active" style="width: 262.5px; margin-right: 20px;"><div class="item">
                         <div class="product">
                             <div class="product_img">
@@ -910,8 +910,8 @@
 
 <!-- START SECTION SUBSCRIBE NEWSLETTER -->
 <div class="section bg_default small_pt small_pb">
-	<div class="container">	
-    	<div class="row align-items-center">	
+	<div class="container">
+    	<div class="row align-items-center">
             <div class="col-md-6">
                 <div class="heading_s1 mb-md-0 heading_light">
                     <h3>Subscribe Our Newsletter</h3>
@@ -1034,29 +1034,29 @@
 </footer>
 <!-- END FOOTER -->
 
-<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
-<!-- Latest jQuery --> 
-<script src="{{ asset('frontend') }}/assets/js/jquery-3.6.0.min.js"></script> 
-<!-- jquery-ui --> 
+<!-- Latest jQuery -->
+<script src="{{ asset('frontend') }}/assets/js/jquery-3.6.0.min.js"></script>
+<!-- jquery-ui -->
 <script src="{{ asset('frontend') }}/assets/js/jquery-ui.js"></script>
 <!-- popper min js -->
 <script src="{{ asset('frontend') }}/assets/js/popper.min.js"></script>
-<!-- Latest compiled and minified Bootstrap --> 
-<script src="{{ asset('frontend') }}/assets/bootstrap/js/bootstrap.min.js"></script> 
-<!-- owl-carousel min js  --> 
-<script src="{{ asset('frontend') }}/assets/owlcarousel/js/owl.carousel.min.js"></script> 
-<!-- magnific-popup min js  --> 
-<script src="{{ asset('frontend') }}/assets/js/magnific-popup.min.js"></script> 
-<!-- waypoints min js  --> 
-<script src="{{ asset('frontend') }}/assets/js/waypoints.min.js"></script> 
-<!-- parallax js  --> 
-<script src="{{ asset('frontend') }}/assets/js/parallax.js"></script> 
-<!-- countdown js  --> 
-<script src="{{ asset('frontend') }}/assets/js/jquery.countdown.min.js"></script> 
-<!-- imagesloaded js --> 
+<!-- Latest compiled and minified Bootstrap -->
+<script src="{{ asset('frontend') }}/assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="{{ asset('frontend') }}/assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- magnific-popup min js  -->
+<script src="{{ asset('frontend') }}/assets/js/magnific-popup.min.js"></script>
+<!-- waypoints min js  -->
+<script src="{{ asset('frontend') }}/assets/js/waypoints.min.js"></script>
+<!-- parallax js  -->
+<script src="{{ asset('frontend') }}/assets/js/parallax.js"></script>
+<!-- countdown js  -->
+<script src="{{ asset('frontend') }}/assets/js/jquery.countdown.min.js"></script>
+<!-- imagesloaded js -->
 <script src="{{ asset('frontend') }}/assets/js/imagesloaded.pkgd.min.js"></script>
-<!-- isotope min js --> 
+<!-- isotope min js -->
 <script src="{{ asset('frontend') }}/assets/js/isotope.min.js"></script>
 <!-- jquery.dd.min js -->
 <script src="{{ asset('frontend') }}/assets/js/jquery.dd.min.js"></script>
@@ -1064,9 +1064,9 @@
 <script src="{{ asset('frontend') }}/assets/js/slick.min.js"></script>
 <!-- elevatezoom js -->
 <script src="{{ asset('frontend') }}/assets/js/jquery.elevatezoom.js"></script>
-<!-- scripts js --> 
+<!-- scripts js -->
 <script src="{{ asset('frontend') }}/assets/js/scripts.js"></script>
 
 
-<div class="zoomContainer" style="transform: translateZ(0px); position: absolute; left: 128.5px; top: 402.641px; height: 580px; width: 522px;"><div class="zoomWindowContainer" style="width: 400px;"><div style="z-index: 999; overflow: hidden; margin-left: 0px; margin-top: 0px; background-position: -71.8448px 0px; width: 522px; height: 580px; float: left; 
+<div class="zoomContainer" style="transform: translateZ(0px); position: absolute; left: 128.5px; top: 402.641px; height: 580px; width: 522px;"><div class="zoomWindowContainer" style="width: 400px;"><div style="z-index: 999; overflow: hidden; margin-left: 0px; margin-top: 0px; background-position: -71.8448px 0px; width: 522px; height: 580px; float: left;
 cursor: crosshair; background-repeat: no-repeat; position: absolute; background-image: url(&quot;{{ asset('frontend') }}/assets/images/product_zoom_img1.jpg&quot;); top: 0px; left: 0px; display: none;" class="zoomWindow">&nbsp;</div></div></div></body></html>

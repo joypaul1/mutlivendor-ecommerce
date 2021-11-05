@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Slider extends Model
+class Sliderss extends Model
 {
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'image','position', 'short_desc', 'offer_desc', 'color', 'link'
+    ];
 }

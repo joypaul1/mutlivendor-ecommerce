@@ -68,7 +68,6 @@
                            type="text"
                            id="short_desc"
                            class="form-control"
-
                            >
                     <strong class="red">{{ $errors->first('short_desc') }}</strong>
                     @if($errors->first('short_desc'))
@@ -82,7 +81,6 @@
                     <input name="color"
                            type="text"
                            id="color"
-
                            class="form-control"
                            >
                     <strong class="red">{{ $errors->first('color') }}</strong>
@@ -100,7 +98,6 @@
                            type="text"
                            id="offer_desc"
                            class="form-control"
-
                            >
                     <strong class="red">{{ $errors->first('offer_desc') }}</strong>
                     @if($errors->first('short_desc'))

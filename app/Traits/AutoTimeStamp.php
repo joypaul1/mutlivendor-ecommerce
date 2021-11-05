@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use Carbon\Carbon;
 
-trait AutoTimeStamp 
+trait AutoTimeStamp
 {
     public static function bootAutoTimeStamp()
     {

@@ -18,29 +18,27 @@ class SliderController extends Controller
          return view('backend.slider.index',compact('sliders'));
     }
 
-
     public function create()
     {
         return view('backend.slider.create');
     }
-
-
     public function store(SliderRequest $request)
     {
-
-        $all =($request->except('_token'));
-        $all['short_desc'] =$request->short_desc;
-        $all['offer_desc'] =$request->offer_desc;
-        $all['color'] =$request->color;
-        $all['link'] =$request->link;
-
-        $all['image'] = (new SimpleUpload)
+        $image = (new SimpleUpload)
             ->file($request->image)
             ->dirName('sliders')
             ->save();
-        Slider::create($all);
 
-        return back()->with('message', 'Slider Added Successfully!');
+        Slider::create([
+            'position'=> $request->position,
+            'short_desc'=> $request->short_desc,
+            'offer_desc' => $request->offer_desc,
+            'color' =>$request->color,
+            'link' => $request->link,
+            'image' => $image
+        ]);
+
+        return redirect()->route('backend.site_config.slider.store')->with('message', 'Slider Added Successfully!');
     }
 
 
