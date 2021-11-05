@@ -14,8 +14,12 @@ class SliderRequest extends FormRequest
     public function rules()
     {
         return [
-            'position' => 'required|integer|unique:sliders',
-            'image'     => 'required|image|dimensions:min_width=1920,min_height=500',
+            'position'      => 'required|integer|unique:sliders',
+            'image'         => 'required|mimes:jpeg,jpg,png,gif|dimensions:min_width=610,min_height=410',
+            'short_desc'    => 'nullable|string',
+            'offer_desc'    => 'nullable|string',
+            'link'          => 'nullable|string',
+            'color'         => 'nullable|string',
         ];
     }
 
@@ -26,8 +30,8 @@ class SliderRequest extends FormRequest
             'position.required' => "position is required.",
             'position.integer'  => 'position must be Number.',
             'position.unique'   => 'This number has already been taken.',
-            'image.image'       => 'Invalid image.',
-            'image.dimensions'  => 'Image min_width=1920px,min_height=500px.',
+            'image.mimes'       => 'Invalid image.',
+            'image.dimensions'  => 'Image min_width=610px,min_height=410px.',
         ];
     }
 }

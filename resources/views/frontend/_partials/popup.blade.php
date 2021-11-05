@@ -4,7 +4,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body">
                         <div class="deal"
-                            style="background-image: url('{{ asset('frontend') }}/assets/imgs/banner/menu-banner-7.png')">
+                            style="background-image: url('{{ asset('frontend') }}/assets/imgs/banner/banner-70.jpg')">
                             <div class="deal-top">
                                 <h2 class="text-brand">Deal of the Day</h2>
                                 <h5>Limited quantities.</h5>

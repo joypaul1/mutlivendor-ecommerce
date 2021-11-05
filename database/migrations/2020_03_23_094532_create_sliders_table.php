@@ -17,6 +17,10 @@ class CreateSlidersTable extends Migration
             $table->bigIncrements('id');
             $table->string('image');
             $table->integer('position')->uniqid();
+            $table->string('short_desc')->nullable();
+            $table->string('color')->nullable();
+            $table->string('offer_desc')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }

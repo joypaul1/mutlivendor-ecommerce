@@ -108,7 +108,7 @@
 
                 </div>
                 <div class="col-sm-9 col-sm-offset-2">
-                    <strong class=" red">{{ $errors->first('address') }}</strong>
+                    <strong class=" red">{{ $errors->first('logo') }}</strong>
                 </div>
             </div>
 
@@ -150,7 +150,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div>ficon
 
         </form>
     </div>

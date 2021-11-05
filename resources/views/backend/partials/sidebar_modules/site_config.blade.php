@@ -17,8 +17,7 @@
                     </a>
                     <b class="arrow"></b>
                 </li>
-            {{-- </ul> --}}
-            {{-- <ul class="submenu"> --}}
+
                 <li class="{{ $routeName === 'backend.site_config.slider' ? 'open' : ''}}">
                     <a href="{{route('backend.site_config.slider.index')}}">
                         <i class="menu-icon fa fa-caret-right"></i>
@@ -27,17 +26,17 @@
                     <b class="arrow"></b>
                 </li>
 
-                <li class="{{ $routeName === 'backend.site_config.privacy' ? 'open' : ''}}">
+                <!-- <li class="{{ $routeName === 'backend.site_config.privacy' ? 'open' : ''}}">
                     <a href="{{route('backend.site_config.privacy.index')}}">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Privacy & Policy
                     </a>
                     <b class="arrow"></b>
-                </li>
+                </li> -->
 
 
 
-            {{-- <ul class="submenu"> --}}
+
                 <li class="{{ $routeName === 'backend.site_config.quick-page' ? 'open' : ''}}">
                     <a href="{{route('backend.site_config.quick.page.index')}}">
                         <i class="menu-icon fa fa-caret-right"></i>
@@ -45,10 +44,7 @@
                     </a>
                     <b class="arrow"></b>
                 </li>
-            {{-- </ul> --}}
 
-
-            {{-- <ul class="submenu"> --}}
                 <li class="{{ $routeName === 'backend.site_config.info' ? 'open' : ''}}">
                     <a href="{{route('backend.site_config.info')}}">
                         <i class="menu-icon fa fa-caret-right"></i>
@@ -57,8 +53,7 @@
                     <b class="arrow"></b>
                 </li>
 
-            {{-- </ul> --}}
-            {{-- <ul class="submenu"> --}}
+
                 <li class="{{ $routeName === 'backend.site_config.info' ? 'open' : ''}}">
                     <a href="{{route('backend.site_config.keyword')}}">
                         <i class="menu-icon fa fa-caret-right"></i>

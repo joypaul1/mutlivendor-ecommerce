@@ -26,9 +26,15 @@ class QuickPageController extends Controller
     {
         $all = $request->all();
         $all['customer_care'] = $request->has('customer_care');
-        QuickPage::create($all);
-        return  redirect()
-                ->route('backend.site_config.quick.page.index')
+        try {
+            $request->createQuickpage($all);
+        } catch (\Exception $ex) {
+            return  redirect()->back()
+            ->with('message', $ex->getMessage());
+        }
+
+
+        return  redirect()->route('backend.site_config.quick.page.index')
                 ->with('message', 'Quick Page created Successfully.');
 
     }
@@ -50,6 +56,7 @@ class QuickPageController extends Controller
     {
         $all = $request->all();
         $all['customer_care'] = $request->has('customer_care');
+
         $quickPage->update($all);
         return  redirect()->route('backend.site_config.quick.page.index')->with('message', 'Quick Page updated Successfully.');
     }

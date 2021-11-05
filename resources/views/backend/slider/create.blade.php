@@ -41,11 +41,11 @@
                     @if($errors->first('image'))
                         <br>
                     @endif
-                    {{-- <strong class="red">Minimum 150x33 pixels</strong> --}}
+                    <strong class="red">Minimum 610x410 pixels</strong>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label no-padding-right" for="image">Position
+                <label class="col-sm-2 control-label no-padding-right" for="position">Position
                 </label>
                 <div class="col-sm-4">
                     <input name="position"
@@ -57,10 +57,76 @@
                     @if($errors->first('position'))
                         <br>
                     @endif
-                    {{-- <strong class="red">Minimum 150x33 pixels</strong> --}}
+
                 </div>
             </div>
-            
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" for="short_desc">Highlight Text
+                </label>
+                <div class="col-sm-4">
+                    <input name="short_desc"
+                           type="text"
+                           id="short_desc"
+                           class="form-control"
+
+                           >
+                    <strong class="red">{{ $errors->first('short_desc') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
+                </div>
+                <label class="col-sm-2 control-label no-padding-right" for="color">Color Text
+                </label>
+                <div class="col-sm-4">
+                    <input name="color"
+                           type="text"
+                           id="color"
+
+                           class="form-control"
+                           >
+                    <strong class="red">{{ $errors->first('color') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" for="offer_desc">Offer Text
+                </label>
+                <div class="col-sm-4">
+                    <input name="offer_desc"
+                           type="text"
+                           id="offer_desc"
+                           class="form-control"
+
+                           >
+                    <strong class="red">{{ $errors->first('offer_desc') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" for="link">Link
+                </label>
+                <div class="col-sm-4">
+                    <input name="link"
+                           type="text"
+                           id="link"
+                           class="form-control"
+
+                           >
+                    <strong class="red">{{ $errors->first('short_desc') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
+                </div>
+            </div>
+
 
             <!-- Buttons -->
             <div class="form-group">

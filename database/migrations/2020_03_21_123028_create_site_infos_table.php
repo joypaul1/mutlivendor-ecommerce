@@ -23,6 +23,8 @@ class CreateSiteInfosTable extends Migration
             $table->string('email')->nullable();
             $table->string('mobile')->nullable();
             $table->text('short_desc')->nullable();
+            $table->text('meta_key')->nullable();
+            $table->text('meta_desc')->nullable();
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ class CreateQuickPagesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->longText('short_desc');
+            $table->boolean('customer_care')->default(false);
             $table->timestamps();
         });
     }

@@ -10,5 +10,5 @@ class SiteInfo extends Model
     use AutoTimeStamp;
 
     protected $guarded = ['id'];
-    protected $fillable = ['name','logo','address','email','mobile','short_desc', 'ficon','title'];
+
 }

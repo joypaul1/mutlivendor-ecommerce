@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Quickpage;
 
+use App\Models\QuickPage;
 use Illuminate\Foundation\Http\FormRequest;
 
 class QuickpageRequest extends FormRequest
@@ -30,5 +31,10 @@ class QuickpageRequest extends FormRequest
             'name.string'           => 'name must be string.',
             'name.unique'           => 'name has already been taken.',
         ];
+    }
+
+    public function createQuickpage($req)
+    {
+        QuickPage::create($req);
     }
 }

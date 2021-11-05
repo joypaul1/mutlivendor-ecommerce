@@ -1,8 +1,8 @@
 @extends('backend.layouts.master')
 
-@section('title','Edit Origin')
+@section('title','Edit Slider')
 @section('page-header')
-    <i class="fa fa-pencil"></i> Edit Origin
+    <i class="fa fa-pencil"></i> Edit Slider
 @stop
 @push('css')
     <style>
@@ -22,8 +22,6 @@
               role="form" enctype="multipart/form-data">
         @csrf
 
-
-
             <!-- Image -->
             <div class="form-group">
                 <label class="col-sm-2 control-label no-padding-right" for="image">Image
@@ -37,16 +35,18 @@
                     @if($errors->first('image'))
                         <br>
                     @endif
-                   {{--  <strong class="red">Minimum 150x33 pixels</strong> --}}
+                    <strong class="red">Minimum 610x410 pixels</strong>
                 </div>
             </div>
-                       <div class="form-group">
-                <label class="col-sm-2 control-label no-padding-right" for="image">Position
+
+            <!-- Position -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" for="position">Position
                 </label>
                 <div class="col-sm-4">
                     <input name="position"
                            type="text"
-                           value="{{ $slider->position }}" 
+                           value="{{ @$slider->position }}"
                            id="position"
                            class="form-control"
                            >
@@ -54,7 +54,60 @@
                     @if($errors->first('position'))
                         <br>
                     @endif
-                    {{-- <strong class="red">Minimum 150x33 pixels</strong> --}}
+
+                </div>
+            </div>
+            <!-- Highlight -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" for="short_desc">Highlight Text
+                </label>
+                <div class="col-sm-4">
+                    <input name="short_desc"
+                           type="text"
+                           id="short_desc"
+                           class="form-control"
+                           value="{{ @$slider->short_desc??' ' }}"
+                           >
+                    <strong class="red">{{ $errors->first('short_desc') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
+                </div>
+
+                <!-- Color -->
+                <label class="col-sm-2 control-label no-padding-right" for="color">Color Text
+                </label>
+                <div class="col-sm-4">
+                    <input name="color"
+                           type="text"
+                           id="color"
+                           value="{{ $slider->color??' ' }}"
+                           class="form-control"
+                           >
+                    <strong class="red">{{ $errors->first('color') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
+                </div>
+            </div>
+            <!-- Offer -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" for="offer_desc">Offer Text
+                </label>
+                <div class="col-sm-4">
+                    <input name="offer_desc"
+                           type="text"
+                           id="offer_desc"
+                           class="form-control"
+                           value="{{ $slider->offer_desc??' ' }}"
+                           >
+                    <strong class="red">{{ $errors->first('short_desc') }}</strong>
+                    @if($errors->first('short_desc'))
+                        <br>
+                    @endif
+
                 </div>
             </div>
 
@@ -85,7 +138,7 @@
                 <div class="widget-main">
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <img src="{{asset($slider->image)}}"
+                            <img src="{{asset(@$slider->image)}}"
                                  width="100"
                                  height="100"
                                  class="img-responsive center-block"

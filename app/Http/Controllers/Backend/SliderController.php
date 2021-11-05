@@ -28,12 +28,16 @@ class SliderController extends Controller
     public function store(SliderRequest $request)
     {
 
-        $all =($request->all());
+        $all =($request->except('_token'));
+        $all['short_desc'] =$request->short_desc;
+        $all['offer_desc'] =$request->offer_desc;
+        $all['color'] =$request->color;
+        $all['link'] =$request->link;
+
         $all['image'] = (new SimpleUpload)
             ->file($request->image)
             ->dirName('sliders')
             ->save();
-
         Slider::create($all);
 
         return back()->with('message', 'Slider Added Successfully!');
