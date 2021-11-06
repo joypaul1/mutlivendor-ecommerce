@@ -21,6 +21,7 @@ class CreateChildCategoriesTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('image')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
 
             $table->unique(['category_id', 'subcategory_id', 'name']);

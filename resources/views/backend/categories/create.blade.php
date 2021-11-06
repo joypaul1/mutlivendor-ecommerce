@@ -23,7 +23,7 @@
 
         <!-- name -->
             <div class="form-group">
-                <label class="col-sm-2 control-label no-padding-right" for="name">Name <sup class="red">*</sup></label>
+                <label class="col-sm-3 control-label no-padding-right" for="name">Name <sup class="red">*</sup></label>
                 <div class="col-sm-4">
                     <input type="text"
                            id="name"
@@ -36,7 +36,7 @@
             </div>
             {{-- //position --}}
             <div class="form-group">
-                <label class="col-sm-2 control-label no-padding-right" for="Position">Position <sup class="red">*</sup></label>
+                <label class="col-sm-3 control-label no-padding-right" for="Position">Position <sup class="red">*</sup></label>
                 <div class="col-sm-4">
                     <input type="number"
                            id="Position"
@@ -53,16 +53,16 @@
 
 
             <!-- Display On Home -->
-            @if ($categories >= 13)
+            @if ($categories >= 6)
                 <div class="form-group" style="vertical-align: middle;">
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"></div>
                     <div class="col-sm-8 ">
-                        <Strong>Sorry! only 13 Categories you can show on Top.</Strong>
+                        <Strong>Sorry! only 6 Categories you can show on Top.</Strong>
                     </div>
                 </div>
             @else()
                 <div class="form-group" style="vertical-align: middle;">
-                    <label class="col-sm-2 control-label no-padding-right" for="show_on_top" style="padding-top: 7px">Show On Top </label>
+                    <label class="col-sm-3 control-label no-padding-right" for="show_on_top" style="padding-top: 7px">Show On Top </label>
 
                     <div class="col-sm-4">
                         <input type="checkbox" id="show_on_top" class="form-control" name="show_on_top"
@@ -72,9 +72,37 @@
                 </div>
             @endif
 
+            @if ($categories >= 10)
+                <div class="form-group" style="vertical-align: middle;">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 ">
+                        <Strong>Sorry! only 6 Categories you can show on Browse category.</Strong>
+                    </div>
+                </div>
+            @else()
+                <div class="form-group" style="vertical-align: middle;">
+                    <label class="col-sm-3 control-label no-padding-right" for="browse_category" style="padding-top: 7px">Browse Category </label>
+
+                    <div class="col-sm-4">
+                        <input type="checkbox" id="browse_category" class="form-control" name="browse_category"
+                            style="width: 20px">
+                        <strong class="red">{{ $errors->first('browse_category') }}</strong>
+                    </div>
+                </div>
+            @endif
+            <div class="form-group" style="vertical-align: middle;">
+                    <label class="col-sm-3 control-label no-padding-right" for="display_on_home" style="padding-top: 7px">Display On Home Product </label>
+
+                    <div class="col-sm-4">
+                        <input type="checkbox" id="display_on_home" class="form-control" name="display_on_home"
+                            style="width: 20px">
+                        <strong class="red">{{ $errors->first('display_on_home') }}</strong>
+                    </div>
+                </div>
+
             <!-- Image -->
             <div class="form-group">
-                <label class="col-sm-2 control-label no-padding-right" for="image">Image </label>
+                <label class="col-sm-3 control-label no-padding-right" for="image">Image </label>
                 <div class="col-sm-4">
                     <input name="image"
                            type="file"
@@ -90,7 +118,7 @@
 
             <!-- Buttons -->
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-4">
+                <div class="col-sm-offset-3 col-sm-4">
                     <button class="btn btn-sm btn-success submit create-button"><i class="fa fa-save"></i> Add </button>
                     <a href="{{route('backend.product.categories.index')}}" class="btn btn-sm btn-gray"><i class="fa fa-refresh"></i>
                         Cancel

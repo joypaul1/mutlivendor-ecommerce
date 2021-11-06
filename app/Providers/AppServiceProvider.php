@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use App\Models\SiteInfo;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Schema;
@@ -32,14 +33,17 @@ class AppServiceProvider extends ServiceProvider
             if (!session()->has('info')) {
                 session()->put('info', SiteInfo::find(1));
             }
-            if (!session()->has('info')) {
-                session()->put('info', SiteInfo::find(1));
-            }
-            if (!session()->forget('slider')) {
+
+            if (!session()->has('slider')) {
                 session()->put('slider',
-                Slider::DataDesc('position')->
+                Slider::dataDesc('position')->
                 get(['image','position', 'short_desc', 'offer_desc', 'color', 'link']));
             }
+            // dd( Category::dataDesc('position')->get());
+            // if (!session()->has('categories')) {
+            //     session()->put('categories',
+            //     Category::DataDesc('position')->get());
+            // }
 
             view()->share('info', session()->get('info'));
 

@@ -15,7 +15,6 @@ class ChildCategoryController extends Controller
     public function index()
     {
         $childCategories = ChildCategory::with('sub_category.category')->latest()->paginate(25);
-
         return view('backend.child_categories.index', compact('childCategories'));
     }
 

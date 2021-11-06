@@ -2,8 +2,26 @@
 namespace App\Traits;
 use Illuminate\Database\Eloquent\Builder;
 
+
+//don't remove or edit anything you can add method only
 trait GlobalScope
 {
+    public function active(Builder $query, $field)
+    {
+        if(!$field){
+            $query->where('status', true);
+        }
+        $query->where($field, true);
+    }
+
+    public function scopeInActive(Builder $query, $field)
+    {
+        if(!$field){
+            $query->where('status', false);
+        }
+        $query->where($field, false);
+    }
+
     public function scopeDataDesc(Builder $query, $field )
     {
         if(!$field){
@@ -11,6 +29,7 @@ trait GlobalScope
         }
         return  $query->orderBy($field, 'DESC');
     }
+
     public function scopeDataAsc(Builder $query, $field )
     {
         if(!$field){

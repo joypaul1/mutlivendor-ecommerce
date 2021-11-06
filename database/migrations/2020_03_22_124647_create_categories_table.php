@@ -21,6 +21,8 @@ class CreateCategoriesTable extends Migration
             $table->integer('position')->nullable();
             $table->boolean('show_on_top')->default(false);
             $table->boolean('display_on_home')->default(false);
+            $table->boolean('browse_category')->default(false);
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

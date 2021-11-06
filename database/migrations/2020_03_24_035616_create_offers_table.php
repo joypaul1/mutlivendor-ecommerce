@@ -17,6 +17,7 @@ class CreateOffersTable extends Migration
             $table->bigIncrements('id');
             $table->string('image');
             $table->integer('position');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

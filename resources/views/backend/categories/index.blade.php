@@ -54,8 +54,9 @@
         <tr>
             <th class="bg-dark" style="width: 10px">SL</th>
             <th class="bg-dark" style="width: 20%">Title</th>
-            <th class="bg-dark" style="width: 20%">Slug</th>
+            <th class="bg-dark" style="width: 20%">Browse Category</th>
             <th class="bg-dark" style="width: 10%">Home</th>
+            <th class="bg-dark" style="width: 10%">Display On Home</th>
             <th class="bg-dark" style="width: 20%">Image</th>
             <th class="bg-dark" style="">Action</th>
         </tr>
@@ -63,23 +64,25 @@
             <tr>
                 <td>{{ $key + 1 }}</td>
                 <td>{{ $category->name }}</td>
-                <td>{{ $category->slug }}</td>
+                <td>{{ $category->browse_category }}</td>
                 <td>{{ $category->show_on_top ? 'Yes' : 'No' }}</td>
+                <td>{{ $category->display_on_home ? 'Yes' : 'No' }}</td>
                 <td>
-                    <img src="{{ asset($category->image) }}"height="30"idth="120"alt="{{ ($category->image) }}">
+                    @if ($category->image)
+                        <img src="{{ asset($category->image??'-') }}"height="30"idth="120"
+                        alt="{{ ($category->image??' ') }}">
+                    @endif
                 </td>
                 <td>
                     <div class="btn-group btn-group-mini btn-corner">
-
                             <a href="{{ route('backend.product.categories.edit', $category->id) }}"
                             class="btn btn-xs btn-info"
                             title="Edit">
                                 <i class="ace-icon fa fa-pencil"></i>
                             </a>
-
-                                <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$category->id}})"
-                                    title="Delete"><i class="ace-icon fa fa-trash-o"></i>
-                                </button>
+                            <button type="button" class="btn btn-xs btn-danger"onclick="delete_check({{$category->id}})"
+                                title="Delete"><i class="ace-icon fa fa-trash-o"></i>
+                            </button>
 
                     </div>
                     <form action="{{ route('backend.product.categories.destroy', $category->id)}}"

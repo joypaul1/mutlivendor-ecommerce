@@ -7,16 +7,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Categories\StoreRequest;
 use App\Http\Requests\Categories\UpdateRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
 use NabilAnam\SimpleUpload\SimpleUpload;
-use PhpParser\Node\Stmt\TryCatch;
+
 
 class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::latest()->paginate(20);
-
+        $categories = Category::paginate(20);
         return view('backend.categories.index', compact('categories'));
     }
 
@@ -30,15 +28,13 @@ class CategoryController extends Controller
         try {
             $all = $request->all();
             $all['show_on_top'] = $request->show_on_top === 'on';
+            $all['display_on_home'] = $request->display_on_home === 'on';
+            $all['browse_category'] = $request->browse_category === 'on';
             $all['image'] = $upload
                 ->file($request->image)
                 ->file($request->image)
                 ->resizeImage(1140, 290)
                 ->save();
-            // $all['thumbnail_image'] = $upload
-            //                 ->dirName('category_thumbs')
-            //                 ->resizeImage(60, 60)
-            //                 ->save();
 
             Category::create($all);
         } catch (\Exception $e) {
@@ -61,7 +57,9 @@ class CategoryController extends Controller
        try {
             $upload = new SimpleUpload;
             $all = $request->all();
-            $all['show_on_top'] = $request->show_on_top == 'on';
+            $all['show_on_top'] = $request->show_on_top === 'on';
+            $all['display_on_home'] = $request->display_on_home === 'on';
+            $all['browse_category'] = $request->browse_category === 'on';
             $all['image'] = $upload
                             ->file($request->image)
                             ->dirName('categories')

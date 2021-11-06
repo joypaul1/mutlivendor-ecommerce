@@ -19,12 +19,13 @@ class CreateSubCategoriesTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('name');
             $table->string('slug')->unique();
+            $table->boolean('status')->default(true);
             $table->timestamps();
 
             $table->unique(['category_id', 'name']);
             $table->foreign('category_id')->references('id')->on('categories');
         });
-        DB::statement('ALTER TABLE sub_categories AUTO_INCREMENT = 5001;');
+        // DB::statement('ALTER TABLE sub_categories AUTO_INCREMENT = 5001;');
     }
 
     /**
